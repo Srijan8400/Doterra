@@ -659,3 +659,142 @@ footer p{
   }
 
 }
+
+
+/* TAG SMALL TEXT */
+
+.tag small{
+
+  display:block;
+
+  margin-top:5px;
+
+  font-size:15px;
+
+  font-weight:500;
+
+  color:#333;
+
+}
+
+
+
+/* PROBLEM SMALL TEXT */
+
+.problem-box small{
+
+  display:block;
+
+  margin-top:6px;
+
+  font-size:16px;
+
+  font-weight:500;
+
+  color:#666;
+
+}
+
+.problem-box.active small{
+
+  color:white;
+
+}
+
+/* THANK YOU POPUP */
+
+.popup-overlay{
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.6);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+
+}
+
+.popup-box{
+
+  background: white;
+
+  padding: 30px;
+
+  width: 90%;
+  max-width: 400px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  animation: popupShow 0.3s ease;
+
+}
+
+.popup-box h2{
+
+  font-size: 32px;
+
+  margin-bottom: 15px;
+
+  color: green;
+
+}
+
+.popup-box p{
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+
+}
+
+#closePopup{
+
+  background: #0a8f08;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 30px;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+}
+
+@keyframes popupShow{
+
+  from{
+
+    transform: scale(0.7);
+
+    opacity: 0;
+
+  }
+
+  to{
+
+    transform: scale(1);
+
+    opacity: 1;
+
+  }
+
+}

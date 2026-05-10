@@ -200,4 +200,14 @@ ${message}`;
 
   window.open(whatsappURL, "_blank");
 
+  // THANK YOU POPUP
+
+document.getElementById("popupOverlay").style.display = "flex";
+
+document.getElementById("closePopup").addEventListener("click",()=>{
+
+  document.getElementById("popupOverlay").style.display = "none";
+
+});
+
 });
