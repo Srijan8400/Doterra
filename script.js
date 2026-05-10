@@ -198,9 +198,7 @@ ${message}`;
 
 `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(finalMessage)}`;
 
-  window.open(whatsappURL, "_blank");
-
-  // THANK YOU POPUP
+// THANK YOU POPUP
 
 document.getElementById("popupOverlay").style.display = "flex";
 
@@ -209,5 +207,14 @@ document.getElementById("closePopup").addEventListener("click",()=>{
   document.getElementById("popupOverlay").style.display = "none";
 
 });
+
+
+// WHATSAPP OPEN AFTER 1 SECOND
+
+setTimeout(()=>{
+
+  window.open(whatsappURL, "_blank");
+
+},1000);
 
 });
