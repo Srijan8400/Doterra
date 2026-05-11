@@ -129,7 +129,15 @@ problemBoxes.forEach((box) => {
 const submitBtn =
 document.getElementById("submitBtn");
 
+const originalBtnText = submitBtn.innerHTML;
+
 submitBtn.addEventListener("click", async () => {
+
+  // LOADING STATE
+
+submitBtn.innerHTML = "Sending...";
+
+submitBtn.disabled = true;
 
   const name =
   document.getElementById("name").value;
@@ -139,6 +147,20 @@ submitBtn.addEventListener("click", async () => {
 
   const message =
   document.getElementById("message").value;
+
+  // VALIDATION
+
+if(name === "" || phone === ""){
+
+  alert("Please fill all details");
+
+  submitBtn.innerHTML = originalBtnText;
+
+  submitBtn.disabled = false;
+
+  return;
+
+}
 
   let selectedProblems = [];
 
@@ -219,5 +241,55 @@ document.getElementById("closePopup").addEventListener("click",()=>{
   document.getElementById("popupOverlay").style.display = "none";
 
 });
+
+// RESET FORM
+
+document.getElementById("name").value = "";
+
+document.getElementById("phone").value = "";
+
+document.getElementById("message").value = "";
+
+document
+.querySelectorAll(".problem-box.active")
+
+.forEach((item)=>{
+
+  item.classList.remove("active");
+
+});
+
+
+// RESTORE BUTTON
+
+submitBtn.innerHTML = originalBtnText;
+
+submitBtn.disabled = false;
+
+
+});
+
+// SHARE BUTTON
+
+const shareBtn =
+document.getElementById("shareBtn");
+
+shareBtn.addEventListener("click",(e)=>{
+
+  e.preventDefault();
+
+  const shareText =
+
+`🌿 doTERRA Wellness
+
+FREE Essential Oils Consultation
+
+👉 https://beautiful-chimera-1c48ec.netlify.app/`;
+
+  const whatsappShareURL =
+
+`https://wa.me/?text=${encodeURIComponent(shareText)}`;
+
+  window.open(whatsappShareURL,"_blank");
 
 });
