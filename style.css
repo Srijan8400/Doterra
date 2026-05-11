@@ -1,3 +1,10 @@
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+
 *{
 
   margin:0;
@@ -353,6 +360,14 @@ textarea{
   font-weight:bold;
 
   cursor:pointer;
+
+}
+
+.main-btn:hover{
+
+  opacity:.9;
+
+  transform:scale(1.01);
 
 }
 
@@ -796,5 +811,81 @@ footer p{
     opacity: 1;
 
   }
+
+}
+
+/* ADMIN SECTION */
+
+.admin-section{
+
+  text-align:center;
+
+  padding:50px 20px;
+
+  background:#f8f8f8;
+
+}
+
+.admin-photo{
+
+  width:120px;
+
+  height:120px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:4px solid #0f8f2d;
+
+  margin-bottom:15px;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+.admin-section h2{
+
+  font-size:32px;
+
+  margin-bottom:10px;
+
+  color:#111;
+
+}
+
+.admin-section p{
+
+  font-size:18px;
+
+  color:#555;
+
+  margin-bottom:20px;
+
+}
+
+.youtube-btn{
+
+  display:inline-block;
+
+  padding:14px 28px;
+
+  background:red;
+
+  color:white;
+
+  text-decoration:none;
+
+  border-radius:40px;
+
+  font-weight:bold;
+
+  transition:0.3s;
+
+}
+
+.youtube-btn:hover{
+
+  transform:scale(1.05);
 
 }

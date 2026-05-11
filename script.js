@@ -198,23 +198,26 @@ ${message}`;
 
 `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(finalMessage)}`;
 
-// THANK YOU POPUP
+// WHATSAPP OPEN
 
-document.getElementById("popupOverlay").style.display = "flex";
+window.open(whatsappURL, "_blank");
+
+
+// THANK YOU POPUP AFTER 1 SECOND
+
+setTimeout(()=>{
+
+  document.getElementById("popupOverlay").style.display = "flex";
+
+},1000);
+
+
+// CLOSE POPUP
 
 document.getElementById("closePopup").addEventListener("click",()=>{
 
   document.getElementById("popupOverlay").style.display = "none";
 
 });
-
-
-// WHATSAPP OPEN AFTER 1 SECOND
-
-setTimeout(()=>{
-
-  window.open(whatsappURL, "_blank");
-
-},1000);
 
 });
