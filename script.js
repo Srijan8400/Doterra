@@ -135,7 +135,7 @@ submitBtn.addEventListener("click", async () => {
 
   // LOADING STATE
 
-submitBtn.innerHTML = "Sending...";
+submitBtn.innerHTML = "Sending<span class='loader-dots'></span>";
 
 submitBtn.disabled = true;
 
